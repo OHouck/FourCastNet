@@ -289,13 +289,16 @@ if __name__ == '__main__':
     parser.add_argument("--vis", action='store_true')
     parser.add_argument("--override_dir", default=None, type = str, help = 'Path to store inference outputs; must also set --weights arg')
     parser.add_argument("--weights", default=None, type=str, help = 'Path to model weights, for use with override_dir option')
-    
+
     args = parser.parse_args()
     params = YParams(os.path.abspath(args.yaml_config), args.config)
     params['world_size'] = 1
     params['global_batch_size'] = params.batch_size
 
-    torch.cuda.set_device(0)
+
+    # OH commented out to run on laptop
+    # torch.cuda.set_device(0)
+    device = torch.device("cpu")
     torch.backends.cudnn.benchmark = True
     vis = args.vis
 
@@ -307,8 +310,10 @@ if __name__ == '__main__':
       assert args.weights is None, 'Cannot use --weights argument without also using --override_dir'
       expDir = os.path.join(params.exp_dir, args.config, str(args.run_num))
 
+
     if not os.path.isdir(expDir):
       os.makedirs(expDir)
+    
 
     params['experiment_dir'] = os.path.abspath(expDir)
     params['best_checkpoint_path'] = args.weights if args.override_dir is not None else os.path.join(expDir, 'training_checkpoints/best_ckpt.tar')

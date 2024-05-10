@@ -1,0 +1,72 @@
+2024-05-09 19:54:55,071 - root - INFO - --------------- Versions ---------------
+2024-05-09 19:54:55,086 - root - INFO - git branch: b'* master'
+2024-05-09 19:54:55,101 - root - INFO - git hash: b'93360c1720a9f97aabf970689f21c9fad8737788'
+2024-05-09 19:54:55,101 - root - INFO - Torch: 2.3.0
+2024-05-09 19:54:55,101 - root - INFO - ----------------------------------------
+2024-05-09 19:54:55,101 - root - INFO - ------------------ Configuration ------------------
+2024-05-09 19:54:55,101 - root - INFO - Configuration file: /Users/ohouck/vc/FourCastNet/config/AFNO.yaml
+2024-05-09 19:54:55,101 - root - INFO - Configuration name: precip
+2024-05-09 19:54:55,101 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2024-05-09 19:54:55,101 - root - INFO - out_channels [0]
+2024-05-09 19:54:55,101 - root - INFO - nettype afno
+2024-05-09 19:54:55,101 - root - INFO - nettype_wind afno
+2024-05-09 19:54:55,101 - root - INFO - log_to_wandb True
+2024-05-09 19:54:55,101 - root - INFO - lr 0.00025
+2024-05-09 19:54:55,101 - root - INFO - batch_size 64
+2024-05-09 19:54:55,102 - root - INFO - max_epochs 25
+2024-05-09 19:54:55,102 - root - INFO - precip /pscratch/sd/p/pharring/ERA5/precip/total_precipitation
+2024-05-09 19:54:55,102 - root - INFO - time_means_path_tp /pscratch/sd/p/pharring/ERA5/precip/total_precipitation/time_means.npy
+2024-05-09 19:54:55,102 - root - INFO - model_wind_path /pscratch/sd/s/shas1693/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/best_ckpt.tar
+2024-05-09 19:54:55,102 - root - INFO - precip_eps 1e-05
+2024-05-09 19:54:55,102 - root - INFO - scheduler CosineAnnealingLR
+2024-05-09 19:54:55,102 - root - INFO - orography False
+2024-05-09 19:54:55,102 - root - INFO - orography_path None
+2024-05-09 19:54:55,102 - root - INFO - exp_dir /pscratch/sd/s/shas1693/results/era5_wind
+2024-05-09 19:54:55,102 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2024-05-09 19:54:55,102 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2024-05-09 19:54:55,102 - root - INFO - inf_data_path /Users/ohouck/globus/fourcastnet/data/FCN_ERA5_data_v0/precip/out_of_sample
+2024-05-09 19:54:55,102 - root - INFO - time_means_path /Users/ohouck/globus/fourcastnet/additional/stats_v0/time_means.npy
+2024-05-09 19:54:55,102 - root - INFO - global_means_path /Users/ohouck/globus/fourcastnet/additional/stats_v0/global_means.npy
+2024-05-09 19:54:55,102 - root - INFO - global_stds_path /Users/ohouck/globus/fourcastnet/additional/stats_v0/global_stds.npy
+2024-05-09 19:54:55,102 - root - INFO - loss l2
+2024-05-09 19:54:55,102 - root - INFO - num_data_workers 4
+2024-05-09 19:54:55,102 - root - INFO - dt 1
+2024-05-09 19:54:55,102 - root - INFO - n_history 0
+2024-05-09 19:54:55,102 - root - INFO - prediction_type iterative
+2024-05-09 19:54:55,102 - root - INFO - prediction_length 41
+2024-05-09 19:54:55,102 - root - INFO - n_initial_conditions 5
+2024-05-09 19:54:55,102 - root - INFO - ics_type default
+2024-05-09 19:54:55,102 - root - INFO - save_raw_forecasts True
+2024-05-09 19:54:55,102 - root - INFO - save_channel False
+2024-05-09 19:54:55,102 - root - INFO - masked_acc False
+2024-05-09 19:54:55,102 - root - INFO - maskpath None
+2024-05-09 19:54:55,102 - root - INFO - perturb False
+2024-05-09 19:54:55,102 - root - INFO - add_grid False
+2024-05-09 19:54:55,102 - root - INFO - N_grid_channels 0
+2024-05-09 19:54:55,102 - root - INFO - gridtype sinusoidal
+2024-05-09 19:54:55,102 - root - INFO - roll False
+2024-05-09 19:54:55,102 - root - INFO - num_blocks 8
+2024-05-09 19:54:55,102 - root - INFO - patch_size 8
+2024-05-09 19:54:55,102 - root - INFO - width 56
+2024-05-09 19:54:55,102 - root - INFO - modes 32
+2024-05-09 19:54:55,102 - root - INFO - target default
+2024-05-09 19:54:55,102 - root - INFO - normalization zscore
+2024-05-09 19:54:55,102 - root - INFO - log_to_screen True
+2024-05-09 19:54:55,102 - root - INFO - save_checkpoint True
+2024-05-09 19:54:55,102 - root - INFO - enable_nhwc False
+2024-05-09 19:54:55,102 - root - INFO - optimizer_type FusedAdam
+2024-05-09 19:54:55,102 - root - INFO - crop_size_x None
+2024-05-09 19:54:55,102 - root - INFO - crop_size_y None
+2024-05-09 19:54:55,102 - root - INFO - two_step_training False
+2024-05-09 19:54:55,102 - root - INFO - plot_animations False
+2024-05-09 19:54:55,102 - root - INFO - add_noise False
+2024-05-09 19:54:55,102 - root - INFO - noise_std 0
+2024-05-09 19:54:55,102 - root - INFO - world_size 1
+2024-05-09 19:54:55,102 - root - INFO - global_batch_size 64
+2024-05-09 19:54:55,102 - root - INFO - experiment_dir /Users/ohouck/vc/FourCastNet/~/Desktop
+2024-05-09 19:54:55,102 - root - INFO - best_checkpoint_path /Users/ohouck/globus/fourcastnet/FCN_weights_v0/precip.ckpt
+2024-05-09 19:54:55,102 - root - INFO - resuming False
+2024-05-09 19:54:55,102 - root - INFO - local_rank 0
+2024-05-09 19:54:55,102 - root - INFO - ---------------------------------------------------
+2024-05-09 19:54:55,102 - root - INFO - Inference for 178 initial conditions
+2024-05-09 19:54:55,107 - root - INFO - Getting file stats from /Users/ohouck/globus/fourcastnet/data/FCN_ERA5_data_v0/precip/out_of_sample/2018.h5
